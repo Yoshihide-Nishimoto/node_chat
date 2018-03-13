@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザ登録</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">ユーザ登録</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form action="/signup" method="post">
+                            <p class="text-danger"><%=message%><br></p>
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="ユーザ名" name="name" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="メールアドレス" name="email" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="パスワード" name="password" type="password" value="">
+                                </div>
+                                <input type="submit" name="submit" class="btn btn-success btn-block" value="登録">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

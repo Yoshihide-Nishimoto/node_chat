@@ -1,0 +1,13 @@
+<a ng-href="#/blogs/new">新規</a>
+<table border="1">
+    <tr><th>&nbsp;</th><th>タイトル</th><th>投稿者</th><th>投稿日</th></tr>
+    <tr ng-repeat="blog in blogs">
+        <td>
+            <a ng-href="#/blogs/{{blog._id}}">編集</a>
+            <button ng-click="delete(blog._id)">削除</button>
+        </td>
+        <td>{{blog.title}}</td>
+        <td>{{blog.author}}</td>
+        <td>{{blog.created_at}}</td>
+    </tr>
+</table>

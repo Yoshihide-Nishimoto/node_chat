@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<title>ブログ一覧</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+<script>
+</script>
+<div class="text-right">
+<%=name %>さんでログインしています<br><input type="button" class="btn btn-danger" onclick="location.href='/logout'" value="ログアウト"></input>
+</div>
+    <table class="table">
+    <tr><th>&nbsp;</th><th>タイトル</th><th>投稿者</th><th>投稿日</th></tr>
+    <% for (var blog of data){ %>
+        <tr>
+        <td>
+            <a href="/blogs/<%=blog._id%>">編集</a>
+            <a href="/blogs/delete/<%=blog._id%>">削除</button>
+        </td>
+        <td><%=blog.title%></td>
+        <td><%=blog.author%></td>
+        <td><%=blog.created_at%></td>
+        </tr>
+    <% } %>
+</table>
+<input type="button" class="btn btn-success center-block" onclick="location.href='/blogs/new'" value="新規"></input><br>
+<input type="button" class="btn btn-success center-block" onclick="location.href='/chat'" value="チャットルームへ">
+
+</html>
